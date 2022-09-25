@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="./assets/scripts/app.js" defer></script>
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <title>بازی حدس عدد</title>
+</head>
+
+<body>
+  <main>
+    <section id="select-difficulty">
+      <h1>به بازی حدس عدد خوش آمدید!</h1>
+      <h3>درجه سختی بازی را انتخاب کنید</h3>
+
+      <ul>
+        <li id="easy">
+          <p>🥚</p>
+          <p>آسان</p>
+        </li>
+        <li id="normal">
+          <p>🐣</p>
+          <p>متوسط</p>
+        </li>
+        <li id="hard">
+          <p>🐥</p>
+          <p>سخت</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="game" class="hidden">
+      <div id="timer"></div>
+      <div id="hearts"></div>
+      <h1 id="title"></h1>
+
+      <input type="number" id="numInput">
+
+      <h2 id="feedback"></h2>
+    </section>
+
+    <div id="result" class="hidden">
+      <div>
+        <p id="resultIcon"></p>
+        <p id="resultText"></p>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

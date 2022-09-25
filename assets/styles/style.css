@@ -1,0 +1,160 @@
+@font-face {
+  font-family: Irancell;
+  src: url("../fonts/irancell.ttf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  direction: rtl;
+  font-family: Irancell, "Courier New", Courier, monospace;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(to bottom, #673ab7, #03edf4);
+}
+
+main {
+  width: 800px;
+}
+
+.hidden {
+  display: none;
+}
+
+#select-difficulty {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+}
+
+ul li {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  width: 165px;
+  height: 165px;
+  background-color: #313131;
+  font-size: 25px;
+  transition: 0.2s;
+  border-radius: 10px;
+}
+
+ul li p:first-child {
+  transition: 0.3s;
+}
+
+ul li p:last-child {
+  transition: 0.1s;
+}
+
+ul li:hover {
+  background-color: #1d1d1d;
+  transform: translate(0, -10px);
+  box-shadow: 0px 9px 16px #000000ab;
+  font-size: 30px;
+}
+
+ul li:hover p:first-child {
+  font-size: 50px;
+}
+
+ul li p {
+  margin: 0;
+  pointer-events: none;
+}
+
+#game {
+  text-align: center;
+}
+
+#numInput {
+  width: 500px;
+  font-size: 60px;
+  text-align: center;
+  letter-spacing: 10px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+#result {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 0;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.popup {
+  scale: 1 !important;
+}
+
+#result div {
+  background-color: white;
+  padding: 70px 70px 60px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 25px;
+}
+
+#result p:first-child {
+  font-size: 50px;
+  scale: 2;
+  margin: 0;
+}
+
+#result p:last-child {
+  margin-top: 30px;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0px 0px 10px rgba(255, 0, 0, 0.637);
+  }
+  to {
+    text-shadow: 0px 0px 30px rgba(255, 0, 0, 0.58);
+  }
+}
+
+#hearts {
+  font-size: 60px;
+  animation: glow 700ms ease infinite alternate;
+}
+
+#timer {
+  font-size: 50px;
+  color: white;
+  transition: 0.3s;
+}
+
+#feedback {
+  margin-top: 40px;
+  color: #f44336;
+}
+
+#title {
+  color: white;
+  font-size: 30px;
+}
